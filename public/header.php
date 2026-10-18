@@ -3,7 +3,7 @@
  * Ministerial Application Header
  * Ministry of Health — State Department for Medical Services (PP-SDOMS)
  */
-require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../database/db.php';
 $current_user = get_current_user_data();
 $active_tab = $active_tab ?? 'dashboard';
 ?>

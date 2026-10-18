@@ -4,7 +4,7 @@
  * Ministry of Health — State Department for Medical Services (PP-SDOMS)
  * Native PHP 8.1+ & MySQL (No Node.js)
  */
-require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../database/db.php';
 require_auth();
 
 $page_title = 'Projects & Programmes — State Department for Medical Services';
@@ -462,7 +462,7 @@ if ($current_project) {
 if ($gantt_year < 1) $gantt_year = min(max((int)date('Y'), 2022), 2027);
 if ($gantt_month === '0') $gantt_month = (string)(int)date('n');
 
-require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/header.php';
 ?>
 
 <div style="display: flex; flex-direction: column; gap: 24px;">
@@ -1481,4 +1481,4 @@ require_once __DIR__ . '/../includes/header.php';
     </div>
 </div>
 
-<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/footer.php'; ?>
